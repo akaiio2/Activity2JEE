@@ -11,7 +11,7 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
 
     List<Product> findByNameContains(String mc);
     List<Product> findByPriceGreaterThan(double price);
-
+    //JPQL   java persistent query language
     // Cette annotation permet de définir une requête JPQL personnalisée
     @Query("select p from Product p where p.name like :x")
 
